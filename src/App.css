@@ -1,38 +1,171 @@
-.App {
-  text-align: center;
+body {
+  background: #2c2e35;
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  background: #2d0c5e;
+  height: 15vh;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+}
+header{
+  height: 75%;
+  width: 50%;
+  display: flex;
+  align-items: flex-end;
+}
+ header h1 {
+  font-size: 5.5rem;
+  color: #FFF;
+  margin-left: 5%;
+  line-height: 1;
+}
+abbr {
+  text-decoration: none;
+  color: #b6a5e2;
+  font-size: 6.5rem;
+}
+.app {
+  max-width: 100%;
+}
+/* Pics style */
+/* .container {
+  height: 80vh;
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  margin-top: 5vh; 
+}
+.container div:first-child {
+  display: flex;
+  max-width: 70%;
+  width: 70%;
+  justify-content: center;
+  background-color: gray;
+}
+.container div:last-child {
+  width: 30%;
+  background-color: white;
+}
+.container div img {
+  /* position: absolute; */
+  /* width: 50%;
+  height: auto;
+}
+.pic-overlay {
+  position: absolute;
+  color: #FFF;
+}
+.description-container hr {
+  color: darkgray;
+}
+.description-card {
+  width: 80%;
+  background: #FFF;
+}
+ */ 
+ section {
+  display: flex;
+  position: relative;
+  height: 87.5vh;
+  align-items: center;
+ }
+ .container {
+  display: flex;
+  gap: 2.5%;
+ }
+ /* Description container */
+ .description-container {
+  justify-content: center;
+  display: flex;
+  width: 25%;
+ }
+ .description-card {
+  background: #FFF;
+  border-radius: 7px;
+  width: 80%;
+  padding: 10px;
+ }
+ .description-card p {
+  color: gray;
+  font-size: 1.2rem;
+  padding: 10px;
+ }
+ .description-card h4 {
+  font-size: 3rem;
+ }
+ /* Pics container */
+ .pic-container {
+  height: 80%;
+  background: #000;
+  width: 70%;
+  min-width: 70%;
+  margin-left: 2.5%;
+ }
+ .image-container {
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: #000;
+  /* margin: 10% 0px; */
+ }
+.image-container img {
+    height: auto;
+    width: 80%;
+ }
+ .pic-overlay {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  margin-top: 5%;
+  width: 70%;
+ }
+ .pic-overlay-info {
+  width: 100%;
+  display: flex;
+  gap: 45%;
+ }
+ .pic-overlay-info  .date{
+  font-size: 4.5rem;
+  margin-left: 30px;
+ }
+ .pic-overlay-info .title {
+  font-size: 5.5rem;
+ }
+ .arrow-btns {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  gap: 50%;
+  top: 175%;
+ }
+ button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background: rgb(122, 121, 121, .6);
+  border: none;
+ }
+ button:hover {
+  background: rgba(122, 121, 121)
+ }
+ .arrow-btn-left{
+  margin-right: 10px;
+  height: 40px;
+  width: 40px;
+  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+ }
+.arrow-btn-right{
+  transform: rotate(180deg);
+  margin-left: 10px;
+  height: 40px;
+  width: 40px;
+  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
 }
