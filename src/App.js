@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from './Components/Header';
 import Pics from './Components/Pics'
+import Footer from "./Components/Footer";
 import "./App.css";
 import axios from 'axios';
 
@@ -24,16 +25,16 @@ function App() {
   
  
   return (
-    <div className="app">
+    <><div className="app">
       <div className='header'>
-        <Header/>
+        <Header />
       </div>
-      <Pics 
-      imgSrc={data.url} 
-      date={data.date} 
-      photoInfo={{photographerName: data.copyright, description: data.explanation, title: data.title}} 
-      /> 
+      <Pics
+        imgSrc={data.url}
+        date={data.date}
+        photoInfo={{ photographerName: data.copyright, description: data.explanation, title: data.title }} />
     </div>
+    <Footer /></>
   );
 }
 
