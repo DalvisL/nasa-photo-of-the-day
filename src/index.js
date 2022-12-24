@@ -1,8 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import theme from './theme';
+import { ThemeProvider } from "styled-components";
+import './index.css'
+
 import App from "./App";
-import load from 'google-fonts-loader';
 
 
-ReactDOM.render(<App  data/>, document.getElementById("root"));
+
+
+ReactDOM.render(
+    <ThemeProvider theme={theme}>
+        <App  data/> 
+    </ThemeProvider>
+    ,
+    document.getElementById("root"));

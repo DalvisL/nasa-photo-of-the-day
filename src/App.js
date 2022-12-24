@@ -2,8 +2,18 @@ import React, { useState, useEffect } from "react";
 import Header from './Components/Header';
 import Pics from './Components/Pics'
 import Footer from "./Components/Footer";
-import "./App.css";
 import axios from 'axios';
+import styled from 'styled-components';
+
+const StyledApp = styled.div`
+  max-width: 100%;
+  .header {
+    background: ${props => props.theme.primaryColor};
+    height: 15vh;
+    display: flex;
+    align-items: center;
+  }
+`
 
 
 
@@ -25,16 +35,18 @@ function App() {
   
  
   return (
-    <><div className="app">
-      <div className='header'>
-        <Header />
-      </div>
-      <Pics
-        imgSrc={data.url}
-        date={data.date}
-        photoInfo={{ photographerName: data.copyright, description: data.explanation, title: data.title }} />
-    </div>
-    <Footer /></>
+    <>
+      <StyledApp className="app">
+        <div className='header'>
+          <Header />
+        </div>
+        <Pics
+          imgSrc={data.url}
+          date={data.date}
+          photoInfo={{ photographerName: data.copyright, description: data.explanation, title: data.title }} />
+      </StyledApp>
+      <Footer />
+    </>
   );
 }
 
